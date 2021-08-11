@@ -1,0 +1,347 @@
+#content-area {
+    overflow: auto;
+    width: 100%;
+    display: flex;
+}
+
+#filter {
+    background: #FAF7F5;
+    width: 30%;
+    max-width: 320px;
+    display: inline-block;
+    float: left;
+    height: 100vh;
+    .inside {
+        padding: 20px;
+        max-width: 300px;
+        h4 {
+            margin-bottom: 23px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        select {
+            background: transparent;
+            padding: 8px 10px;
+            font-size: 13px;
+            font-weight: 400;
+            color: #1b1b1b;
+            display: block;
+            margin-bottom: 20px;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .filterLabel {
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 0.3rem;
+            color: #828d9d;
+        }
+        .filters {
+            .title {
+                font-size: 0.9rem;
+                display: block;
+                margin-bottom: 0.3rem;
+                color: #828d9d;
+            }
+            input[type="text"] {
+                width: 45%;
+                display: inline-block;
+                margin-right: 2.5%;
+                margin-bottom: 1.5rem;
+                border-radius: 5px;
+                font-size: 0.9rem;
+                padding: 0.4rem;
+                border: 1px black solid;
+            }
+            &.extras {
+                label {
+                    display: block;
+                    width: 100%;
+                    padding: 10px 0;
+                    input[type="checkbox"] {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#listings {
+    width: 70%;
+    float: left;
+    display: inline-block;
+    padding: 15px;
+    background: #FFFEFF;
+    position: relative;
+    .search-area {
+        input[type="text"] {
+            width: 70%;
+            background: transparent;
+            font-size: 2rem;
+            font-weight: 100;
+            border: none;
+            border-bottom: 2px solid #828d9d;
+            margin-bottom: 20px;
+            color: #dadde2;
+            outline: none;
+        }
+    }
+    .sortby-area {
+        margin-bottom: 20px;
+        .results {
+            color: #828d9d;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+        .sort-options {
+            float: right;
+            select {
+                font-size: 0.8rem;
+                font-weight: 300;
+                border: 1px solid #dadde2;
+                background: transparent;
+                padding: 5px;
+                display: inline-block;
+                margin-right: 15px;
+                vertical-align: top;
+            }
+            .view {
+                display: inline-block;
+                svg {
+                    font-size: 1.5rem;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    .listings-results {
+        margin-bottom: 60px;
+        .listing {
+            background: #fff;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+            -moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+            box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+            .listing-img {
+                color: white;
+                padding: 15px;
+                position: relative;
+                background: url("https://nimvo.com/wp-content/uploads/2018/04/Modern-House.jpg") no-repeat center center; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                min-height: 200px;
+                -webkit-border-top-left-radius: 5px;
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-radius-topleft: 5px;
+                -moz-border-radius-topright: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                &:hover {
+                    .details {
+                        opacity: 1;
+                    }
+                    .address {
+                        opacity: 0;
+                    }
+                }
+                .address {
+                    font-size: 1.2rem;
+                    text-transform: capitalize;
+                    position: absolute;
+                    bottom: 10px;
+                    opacity: 1;
+                    transition: all .4s ease-in-out;
+                    text-shadow: 0px 1px 4px rgba(91, 91, 91, 1);
+                }
+                .details {
+                    display: flex;
+                    transition: all .4s ease-in-out;
+                    opacity: 0;
+                    padding: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    -webkit-border-top-left-radius: 5px;
+                    -webkit-border-top-right-radius: 5px;
+                    -moz-border-radius-topleft: 5px;
+                    -moz-border-radius-topright: 5px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8709e8+0,d54eed+100 */
+                    background: rgba(135,9,232,.8); /* Old browsers */
+                    background: -moz-linear-gradient(-45deg,  rgba(135,9,232,.8) 0%, rgba(213,78,237,.8) 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(-45deg,  rgba(135,9,232,.8) 0%,rgba(213,78,237,.8) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(135deg,  rgba(135,9,232,.8) 0%,rgba(213,78,237,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8709e8', endColorstr='#d54eed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                    .user-img {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        border: 2px solid white;
+                        display: inline-block;
+                        background: url("https://nimvo.com/wp-content/uploads/2018/04/Modern-House.jpg") no-repeat center center; 
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                    }
+                    .user-details {
+                        display: inline-block;
+                        vertical-align: top;
+                        .user-name {
+                            font-size: 1rem;
+                            display: block;
+                            color: rgba(225,225,225,1);
+                            margin-top: 3px;
+                            margin-bottom: 5px;
+                        }
+                        .post-date {
+                            font-size: 0.9rem;
+                            display: block;
+                            color: rgba(225,225,225,.7);
+                        }
+                    }
+                    .listing-details {
+                        margin-top: 20px;
+                        margin-bottom: 10px;
+                        svg {
+                            display: inline-block;
+                            font-size: 20px;
+                            margin-right: 15px;
+                        }
+                        span {
+                            display: inline-block;
+                            font-size: 0.8rem;
+                            font-weight: 300;
+                            vertical-align: top;
+                            position: relative;
+                            top: 4px;
+                        }
+                        .floor-space {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            .bottom-info {
+                padding: 20px 15px;
+                .price {
+                    font-size: 1.3rem;
+                    display: block;
+                    margin-bottom: 10px;
+                    color: #828d9d;
+                }
+                .location {
+                    font-size: 1.1rem;
+                    display: block;
+                    color: #dadde2;
+                }
+            }
+        }
+    }
+}
+
+.view-btn {
+    background: black;
+    padding: 8px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 130px;
+    transition: background .3s ease-in-out;
+    &:hover {
+        background: #FF718E;
+        cursor: pointer;
+    }
+}
+.listing-pagination {
+    text-align: center;
+    .pages {
+        display: inline-block;
+        background: white;
+        -webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+        -moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+        box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+        li {
+            display: inline-block;
+            padding: 20px 30px;
+            &:hover,
+            &.active {
+                background: #FF718E;
+                color: white;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.profile-img {
+    padding: 0;
+}
+button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+.blured {
+}
+
+.footer-image {
+    img {
+        width: 100vw;
+        height: 400px;
+    }
+}
+
+.overlay {
+    width: 100%;
+    top: 0;
+    bottom: -905px;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width: 1145px) and (min-width: 769px) {
+    #listings .listings-results .listing .listing-img .details .listing-details {
+        margin-top: 10px;
+    }
+    .view-btn {
+        padding: 5px;
+    }
+}
+
+@media  screen and (max-width: 747px) {
+    .listing-pagination{
+        .pages {
+            li {
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: 576px) {
+    .listing-pagination{
+        .pages {
+            li {
+                padding: 5px 15px;
+            }
+        }
+    }
+}
+

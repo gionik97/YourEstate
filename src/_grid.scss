@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+.row-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    grid-gap: 50px;
+}
+
+.row-long {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(293px, 1fr));
+    grid-gap: 60px;
+}
+
+[class*='col-'] {
+    padding: 1em 0;
+    width: 100%;
+    min-height: 1px;
+}

@@ -1,0 +1,97 @@
+.home-result {
+    background: #FFFEFF;
+    z-index: 10;
+    display: flex;
+    color: #1b1b1b;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50px;
+    left: -93px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+    -moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+    box-shadow: 0 1px 5px 1px rgba(224, 224, 224, 1);
+    .home-img {
+        background: url("https://nimvo.com/wp-content/uploads/2018/04/Modern-House.jpg") no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        flex: 1;
+    }
+    .home-details {
+        padding: 0 10px 10px 10px;
+        flex: 1;
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 1.5rem;
+            border-bottom: 1px solid #FF718E;
+            padding: 15px 0;
+            margin-bottom: 15px;
+            .close-btn {
+                cursor: pointer;
+            }
+        }
+        .home-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            span {
+                font-size: 1.6rem;
+                margin-right: 15px;
+            }
+            div {
+                color: #828d9d;
+            }
+        }
+        .offer-button {
+            margin-bottom: 20px;
+            button {
+                width: 100%;
+                color: #FF718E;
+                padding: 10px;
+                border: 1px solid #FF718E;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+            p {
+                font-size: 15px;
+                .register-link {
+                    text-decoration: none;
+                    color: #FF718E;
+                    padding-left: 5px;
+                }
+            }
+        }
+        .overview {
+            overflow-y: scroll;
+            height: 300px;
+            .features{
+                margin-bottom: 15px;
+                h3 {
+                    font-size: 1.3rem;
+                    margin-bottom: 10px;
+                }
+                ul {
+                    columns: 192px 4;
+                    break-inside: avoid;
+                    color: #828d9d;
+                    li {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            .description {
+                h3 {
+                    font-size: 1.3rem;
+                    margin-bottom: 10px;
+                }  
+            }
+        }
+    }
+}
+
